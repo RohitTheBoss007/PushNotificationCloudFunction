@@ -26,7 +26,13 @@ exports.sendNotification=functions.firestore.document("Users/{user_id}/Notificat
 				notification: {
 					title : "Notification from: "+from_name,
 					body : from_message,
-					icon : "default"
+					icon : "default",
+					click_action: "com.example.android.firebasepushnotifications.TargetActivity"
+				},
+				data: {
+					message:from_message,
+					from_name:from_name
+
 				}
 
 			};
