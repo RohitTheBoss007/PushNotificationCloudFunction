@@ -31,7 +31,8 @@ exports.sendNotification=functions.firestore.document("Users/{user_id}/Notificat
 				},
 				data: {
 					message:from_message,
-					from_name:from_name
+					from_name:from_name,
+					destination:"com.example.android.firebasepushnotifications.NotificationActivity"
 
 				}
 
